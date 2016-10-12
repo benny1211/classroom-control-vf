@@ -1,5 +1,5 @@
 node default {   
-  include role::classroom
+#  include role::classroom
 
 user {'fundamentals':
   ensure => present,
