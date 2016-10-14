@@ -93,7 +93,7 @@ support:	postmaster
 decode:		root
 
 <% if $admin and $admin != 'root' { -%>
-# Person who should get root's mail
+# Person who should get root's mail **Updated by template epp**
 root:  <%= $admin %>
 <% } else { -%>
 #root:   marc
