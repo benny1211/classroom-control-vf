@@ -1,9 +1,19 @@
-class nginx {
-  File {
-   owner => 'root',
-   group => 'root',
-   mode => '0664',
-  }
+###class nginx {
+###  File {
+###   owner => 'root',
+###   group => 'root',
+###   mode => '0664',
+###  }
+  
+class nginx (
+  $root = undef,
+){
+
+File {
+  owner => 'root',
+  group => 'root',
+  mode => '0664',
+}
 
 package { 'nginx':
   ensure => present,
