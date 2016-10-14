@@ -54,6 +54,10 @@ if $::virtual != 'physical' {
   
 $message = hiera('message')
  notify { $message: }
+ 
+ class {'nginx':
+   root => '/var/www/html',
+ }
 
 
 #notify {"Hello, my name is ${::hostname}":}
