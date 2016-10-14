@@ -43,8 +43,9 @@ node default {
   # Example:
   #   class { 'my_class': }
   
-include role::classroom
+###include role::classroom
 ###  include users
+include aliases
 
 if $::virtual != 'physical' {
   $vmname=capitalize($::virtual)
